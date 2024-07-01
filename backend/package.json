@@ -1,0 +1,31 @@
+{
+  "name": "tsa-pin-trader",
+  "version": "1.0.0",
+  "description": "To keep track of pins available for trade",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "nodemon": "3.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tsa-pin-trader"
+  },
+  "keywords": [
+    "Market",
+    "Trade",
+    "Online",
+    "Real-Time"
+  ],
+  "author": "Zachariah Kersey",
+  "license": "ISC"
+}
