@@ -13,7 +13,7 @@ export function Login() {
     useEffect(() => {
         const username = localStorage.getItem("user");
         if (username) {
-            setLoggedIn(false);
+            setLoggedIn(true);
         }
     }, []);
 
