@@ -20,12 +20,32 @@
   padding: 1%;
 }
 
+.pin-card-empty {
+  height: 100%;
+  width: 20%;
+  border-radius: 5px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1%;
+}
+
 .pin-card figure {
   margin: auto;
   text-align: center;
+  height: 80%;
+  width: 100%;
 }
 
 .pin-card img {
-  width: 90%;
+  width: 95%;
+  object-fit: cover;
   border-radius: 5px;
+}
+
+.pin-card figcaption {
+  height: auto;
+  width: 100%;
 }

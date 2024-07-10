@@ -11,8 +11,12 @@ function PinCard({ currentCard }) {
     setCardData(currentCard);
   }, [currentCard]);
 
-  if (!cardData) {
-    return <div>Loading...</div>;
+  if (cardData == "Empty") {
+    return (
+      <div className="pin-card-empty">
+        <p>&nbsp;</p>
+      </div>
+    )
   }
   return (
     <div className="pin-card">

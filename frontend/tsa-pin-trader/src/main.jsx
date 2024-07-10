@@ -1,30 +1,19 @@
 /* React Imports */
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
 /* CSS Imports */
-import "./assets/styles.css";
-import "./index.css";
+import "./main.css";
 
 /* Component Imports */
-import PinCardColumn from "./components/PinBoard.jsx";
-import PinCard from "./components/ui/card.jsx";
 import TestApp from "./TestApp.jsx";
 
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//   <React.StrictMode>
-//     {/* <App /> */}
-//     {/* <PinCard /> */}
-//     <PinCardColumn />
-//     <PinCardColumn />
-//     <PinCardColumn />
-//     <PinCardColumn />
-//     <PinCardColumn />
-//   </React.StrictMode>
-// );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <TestApp />
-  </React.StrictMode>
+    <Router>
+      <TestApp />
+    </Router>
+  </React.StrictMode >
 );

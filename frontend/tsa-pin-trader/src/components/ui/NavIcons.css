@@ -1,0 +1,45 @@
+.nav-icons .bx-cart,
+.nav-icons .bx-bell,
+.nav-icons .bx-user {
+    position: relative;
+    cursor: pointer !important;
+    font-size: 2em;
+}
+
+.shop-cart,
+.notification-bell {
+    position: relative;
+}
+
+.icon-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    font-size: 1em;
+    height: 20px;
+    width: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer !important;
+}
+
+.nav-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    gap: 1em;
+}
+
+.icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}

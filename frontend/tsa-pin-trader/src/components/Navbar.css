@@ -1,0 +1,26 @@
+.navbar {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1%;
+}
+
+.navbar > img {
+    height: 100%;
+    width: auto;
+    margin: 1%;
+}
+
+.navbar > h3 {
+    line-height: 1em;
+    width: 15%;
+}
+
+.navbar >h3 > span {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #42ABE0;
+}

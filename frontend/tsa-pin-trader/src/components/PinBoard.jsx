@@ -7,7 +7,7 @@ import "./PinBoard.css";
 /* Component Imports */
 import PinCard from "./ui/card.jsx";
 
-export function PinBoard() {
+export function PinBoard({ searchTerm }) {
   const [cardList, setCardList] = useState([]);
 
   useEffect(() => {
@@ -22,25 +22,31 @@ export function PinBoard() {
       });
 
       const result = await response.json();
-      setCardList(result.message); // Assuming result is an array of cards
+      console.log("Fetched Pins");
+      setCardList(result.message);
     }
 
     getPinInfo();
   }, []);
 
+  const filteredCardList = cardList.filter(pin =>
+    pin.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   const chunkArray = (array, chunkSize) => {
     const results = [];
+    while (array.length % 4 !== 0) {
+      array.push("Empty");
+    }
     for (let i = 0; i < array.length; i += chunkSize) {
       results.push(array.slice(i, i + chunkSize));
     }
     return results;
   };
 
-  // Chunk pinCards into groups of 4
-  const chunkedPinCards = chunkArray(cardList, 4);
+  const chunkedPinCards = chunkArray(filteredCardList, 4);
 
   return (
-    // <div className="pin-board">
     <div className="pin-board">
       {chunkedPinCards.length > 0 ? (
         chunkedPinCards.map((chunk, index) => (
@@ -51,7 +57,9 @@ export function PinBoard() {
           </div>
         ))
       ) : (
-        <div>Loading...</div>
+        <div className="pin-board">
+          <span className="no-pins">No pins found!</span>
+        </div>
       )}
     </div>
   );
