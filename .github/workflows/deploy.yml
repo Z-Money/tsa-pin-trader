@@ -31,9 +31,6 @@ jobs:
       - name: Install step
         run: "cd backend; npm install"
 
-      - name: Build step
-        run: "cd backend; npm run start"
-
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
