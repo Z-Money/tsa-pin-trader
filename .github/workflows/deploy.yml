@@ -38,5 +38,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "tsa-pin-trader"
-          entrypoint: "backend/server.js"
-          root: ""
+          entrypoint: "server.js"
+          root: "backend/"
