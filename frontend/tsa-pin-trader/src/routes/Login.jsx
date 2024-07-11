@@ -13,7 +13,7 @@ export function Login() {
     useEffect(() => {
         const username = localStorage.getItem("user");
         if (username) {
-            setLoggedIn(false);
+            setLoggedIn(true);
         }
     }, []);
 
@@ -26,7 +26,7 @@ export function Login() {
         return (
             <div className="container">
                 <div className="header">
-                    <div className="text">{action}</div>
+                    <div className="text" onClick={Navigate("/home")}>{action}</div>
                     <div className="underline"></div>
                 </div>
                 <div className="inputs">
