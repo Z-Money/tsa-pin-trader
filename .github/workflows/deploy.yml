@@ -36,4 +36,4 @@ jobs:
         with:
           project: "tsa-pin-trader"
           entrypoint: "server.js"
-          root: "/backend/"
+          root: "backend/"
