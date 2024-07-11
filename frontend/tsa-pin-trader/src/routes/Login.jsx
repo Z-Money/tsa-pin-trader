@@ -9,7 +9,7 @@ import "./Login.css";
 
 export function Login() {
     const [loggedIn, setLoggedIn] = useState(false);
-
+    const  Navigate = useNavigate();
     useEffect(() => {
         const username = localStorage.getItem("user");
         if (username) {
